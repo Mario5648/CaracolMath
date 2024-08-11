@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caracol Mathematics</title>
+    <link rel="icon" href="caracol_logo.ico" type="image/x-icon">
+    <script src="general-script.js"></script>
+    <link rel="stylesheet" href="desktop-styles.css">
+    <link rel="stylesheet" href="mobile-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="mainBody">
+
+    <div class="navbarContainer">
+        <div>
+            <a href="./index.html"><img class="logoImage" src = "./caracol_logo.png"></a>
+        </div>
+
+        <div class="menuOptions">
+            <a href="./subjects.html"><p class="optionText">Subjects</p></a>
+            <p>•</p>
+            <a href="./about.html"><p class="optionText">About</p></a>
+            <p>•</p>
+            <a href="./faq.html"><p class="optionText">FAQ</p></a>
+        </div>
+
+        <div class="desktopMenu">
+            <a href="./subjects.html"><button class="getStartedButtonBlue normalTextStyle">Get Started</button></a>
+        </div>
+
+        <div class="mobileMenu">
+            <div class="topnav">
+                <a href="javascript:void(0);" onclick="myFunction()"><i class="fa fa-bars active" style="color:white;font-size: 50px;"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="myLinks">
+        <div class="mobileMenu">
+            <a href="./subjects.html">Subjects</a>
+            <a href="./about.html">About</a>
+            <a href="./faq.html">FAQ</a>
+        </div>
+    </div>
+
+    <div class="sectionSpace"></div>
+
+    <div class="faqContainer">
+        <p class="pageTitleText">Σ About</p>
+        <br>
+        <p class="aboutUsText">I created this web application to continue my journey of sharpening my mathematics skills. As an adult,  I rarely use complicated math, even as a software engineer, but I have always enjoyed it. I would hate to lose the skills I have built throughout my life. Doing a daily problem helped me refresh on topics I have not seen for a while, and even improve over time. I hope you all have the same sentiment and improve using this application :).</p>
+    </div>
+
+    <div class="sectionSpace"></div>
+    <div class="sectionSpace"></div>
+    <div class="sectionSpace"></div>
+
+    <div class="footer">
+        <div class="footerContentsContainer">
+            <div>
+                <p class="normalTextStyle footerText">Social Media</p>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADYklEQVR4nO2Zy04UQRSGe4GK4TouYauCcSGK7lTiTmIi+gSEiLyAF3QNsiUYlhJ8AS+JKxm87tS9gG4U3CoKiCv5TMlfsTKZ6a7u6Z4ek/mTSTrTVaf+03Xq3CoIGmggfwA9wDiwCCwBW6QHI8vILAI3gcNZKHASeEbtsQj0p6HAHmAW2JHgr8A94KJ2pyWVL7W7VotkDgFzWgutfRdoSiq4ADyXsJ/ABNCeFnGP9duBSWDb2Z3OJDthTemLMa3MGEdzOQZ8EpdXwN44k405GawCXZky9ePTBayJ00ycg70jczoe1AmAEzKz3+bZZ4I1qYmgzgDcEbdi1MAexzvV7GA761/QmTRmNFjmfQfwTRwPhQkywc5gLmvSFdZfc2LIaoUx83p/I0yQiaoGQ1kSrlKRy3q/ECZoRYMSpweKPyPAY2BZqceWnh/pXaHC3EEpY7zl+QjzXw4jsaFBbQkU2A/cBr57pB7rwC2gOcE6bZKxETboLxL6+XcO0afAqE1j9OvVfwvOuLdJ4hRRPJMoIiVW7XYDpz3mnHHMOHbQJW1FZE52J17EyYV0ll5q7ps4ZkYGipgzgeqIeAndP2XszoznoohI2IMdaU4hcgYcB1DIQ5ERe7Bj8I6KX8N5KGJigsGVGJwryboqWQ/yUMTadk8MzpVk9VqvF+SgyKaGt8bgXElWq2Rt/u+KmLLW4Ifn+IZphR320aBKAGN5HvaRyHTaE+qQ5OZ+CwpiBmdj8C6Vc04yjKzOmitSkqKs+EblMh/jQ2TFVwNFmpWKowTQWxngAPC6LpLGMmm8+boDgZ85faybNL5EGfNVLYryREcU7Fr1POYcbLsTmRRWG1WUus3qwlgHEIZ1XR3sy6rUXUmh+dBp3CjwUHXKpn5L+m84Se0St/mQazvIB047qHL5oO3OrUHnA+C+OF6r25ZpFLxbphpsvcpkUGcApiLNyhncr2uFba/2fY3A7nXHL10r9PlOMnd2qH3ZnTnLaD7dTl94Os7EJsfETJv/VKZMw7n0AZ+dQNuUJB5YZbZ1ydKRGePyB3tK5oRarcnij3ZmRnaJPIa5n7ikhkHVZa6zlkljehUn5h3vZNaeTnw9XbLIUeAJtUcxE4djfLepG7TNNv1IC0bWe3XyrwMHU1eggQaC2PgDcoKh50PBZGwAAAAASUVORK5CYII=">
+            </div>
+
+            <div>
+                <p class="normalTextStyle footerText">Get Started</p>
+                <a href="./subjects.html"><button class="getStartedButtonBlue normalTextStyle">Start Learning</button></a>
+            </div>
+        </div>
+        <br>
+        <br>
+        <p class="footerText">Developed by : Mantis Software LLC</p>
+    </div>
+
+</body>
+</html>

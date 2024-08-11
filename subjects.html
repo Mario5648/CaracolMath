@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caracol Mathematics</title>
+    <link rel="icon" href="caracol_logo.ico" type="image/x-icon">
+    <script src="general-script.js"></script>
+    <script src="math_questions.js"></script>
+    <script src="timer.js"></script>
+    <script src="question_functions.js"></script>
+    <link rel="stylesheet" href="desktop-styles.css">
+    <link rel="stylesheet" href="mobile-styles.css">
+    <link rel="stylesheet" href="text_styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body class="mainBody">
+
+    <div class="navbarContainer">
+        <div>
+            <a href="./index.html"><img class="logoImage" src = "./caracol_logo.png"></a>
+        </div>
+
+        <div class="menuOptions">
+            <a href="./subjects.html"><p class="optionText">Subjects</p></a>
+            <p>•</p>
+            <a href="./about.html"><p class="optionText">About</p></a>
+            <p>•</p>
+            <a href="./faq.html"><p class="optionText">FAQ</p></a>
+        </div>
+
+        <div class="desktopMenu">
+            <a href="./subjects.html"><button class="getStartedButtonBlue normalTextStyle">Get Started</button></a>
+        </div>
+
+        <div class="mobileMenu">
+            <div class="topnav">
+                <a href="javascript:void(0);" onclick="myFunction()"><i class="fa fa-bars active" style="color:white;font-size: 50px;"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="myLinks">
+        <div class="mobileMenu">
+            <a href="./subjects.html">Subjects</a>
+            <a href="./about.html">About</a>
+            <a href="./faq.html">FAQ</a>
+        </div>
+    </div>
+
+    <span id="mainBodyContent">
+        <div class="sectionSpace"></div>
+
+        <div class="subjectContainer">
+            <p class="pageTitleText">Σ Subjects</p>
+            <br>
+            <div class="subjectOptionBox" onclick="generateAlgebraOneQuestion()">
+                <p>Algebra 1</p>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFFklEQVR4nO2ba6hVRRTHl1rZA0t7YU9B0rIspTQ1iF74KK0UK4mi+lIpiEUKUR8yeihFEFRIgSRCVmRlT+ghRiBUUmnYk6LHvWam4dVCRG/1i/HM5e6zztqvc2bfYO/zg/NpZs9/1jpzZq9Za45ImzZt2hQMcBBwE/A28DvwL/ALsAa4EugnZQUYC3xNMmuBU6RsABcCe8jGT8AwKQvAScAf5GO9lAVgtWHgKmAMcDgwHnhHte+SMgCc4Te6KA8b/QYAyyN9HpUyADyojN/o3gQJ/d1qOE/KArBeOWCeVAWgH/CXcsBwqQrAqcr4LqkSwBTlgI+kSgALlANWSJUAlikH3C1VAlinHHC1VAngN+WAkVIVgMHK+P3AwVIVgInKAV9JlQBuUQ54RcoKMB3YQnY6gculLFAzKC8dUhYI6ADgTOAZYCfwDXBuBv2rgK3+s9QlYAoxNA63nHM6oQOYpsY4FnjByB28Fyvc+2yn8cZ5DDhU/g+AUWpCW1L6TzVihjwOiNt/XAJ2jPQ1wCw1kbUJfa/z35jFd8A5GfSmAdtixugCJgQ3MgngHjWJpxKM/9uY9GfAbJcmSxSqH+sw4DafUdb86TJN0lcAK9UE5sfkCnWyxDljcVLKLIP2IOBZwwk/A0NaNi4LwAYlfplqHwh8YRh/fcA53G84YU2o8dPSYLuVcN1rCbjTmNytEhjgcUNnamgdqwgSZXe03ueXqKsJRnlZCsAdvoBPlJZbef2L0DuAW+5KcINqX6Ta3T5wnBSES7EbscV0KVBwvhJbqdr1b/+hwibTq/ma0ny+SLEnldi9kbbRxsZ3Qkp06T4zE/RmRvqZByzgEqXrirSDAplcjy9vR5kVaVuo2j7IGN52A3OMPnN8Ww+dMWP19+eEKFdIEdAYlo6KtLlYP8rCHPF9nRMM4xNPmKru6Fgc2HRxIkeqDceFuIdE2n9Qk7goZWl3W06IMb475acyV/V/swgHjFci36r4QE96cMp4cYaajkkZa5J6ZnNI2w/g7/6YkZdfHVH2SwaAawyD9UZ6Q4ZxTlPP/SqhAZYokaWRtmGqbXuOceOckMl4P8Yx6tm9zdoZC/CqErk5oVC6I8e41yY44MaMY7iES5Q9Ehoab4BNUCFwlO4sV+ISjM/lBGCEes58ZbZ6/2+fEjlKbYI68TGkDzfBCwrdBIHTlcBWo8/3qs/FffganKf6vxHSfnGFTyWwzuijA6FFgQOhzhyB0H2BTK/hSt9KYJkogLsKDoXjUu0DjFA4bGEGWKEEFhh9zlJ9/gFOTDkMdWQ8DHUkHIYuLfwwBHysRCbH9Nuk+i0JOhFb83WluaoIkS4lYl54Nk6ELiFyfPAJ9eqNMxIiwZf/cMMo8x3v44Htqv/qoBOqT75+rrQ+DX4ln8Ys0Icp/e+gkblBJ1XTecLQmdLMCW9iSuJxc56ztv9mNjUb1jZ5RTf/HQVqBcYelluVGuARY2cfkWHskb5io53wQCtXafypUxdmHD+mHb8bMPL77wLnA0f4f3+8aAhlTjj68pcV52/0Z4C8pbHb/d9vNLuauoBN40XnNHYAQ3NqzDbOENHiaGp11+X3EoqjO5uuC1I7w7ulkwW3809qUmeyEan18H4L5fEvgbObMr4H4GRXo08x3m2Co6UFgKOB5wJdkNjn96aBrcxJ1FF2BvCSr7Lu9SvjLZeRaaWaG1M1ftr/bl1+YWyGZ2b4VbDNZ6XM8LpNmzZtJIH/AFVj8ME9oIeuAAAAAElFTkSuQmCC">
+            </div>
+
+            <br>
+            <br>
+
+            <div class="subjectOptionBox" onclick="generateAlgebraTwoQuestion()">
+                <p>Algebra 2</p>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAD0UlEQVR4nO2aWaiOQRjHx04iSzi2XFGylBISLkhZsosSF7JHshTKcuGGU9YLuXGBSNabI9utLaHEBVLIdqzlcHBK/DTnzMd4zLzzfb73SO83vzp1ep93nnnm/77zzDPzfkpFIpFIJBKJRCKRSCRSMEAXoBx4CHwC7gGbgBYq6wADgJe4uQ10UFkFaAO8IpkzKqsAOwhTpbII0AB4IQar80AZcNq6tk9lEaCPGPxroImxNQamAJP1/yqLADOFABWqlAA2CgG2qVICOCgEWKRKCeCqEGCkKiWAd0KAbqpUANqKwX8GGqqsA4wHniUUPU+BsSqrUDfAEE9UVqFAAfRuEFgO3NElMbC5nuObBFSaOHVV2jXtDsYGRHgCjDH3DgMeOO7plWpQv8cnY6uql+UZuCk6Gi7s04Eaj0g9Uw/oV7++/JRukQZ8EB2UWbYhnsHra+tTDeTPuMYlnE2sSquTzvI1s2zNgUfC/s1smzumEkA4Ph3DYvP623wF+qXRwQjh+IZlW+cY/CwR3EmgGjgGtBK+W1v2o0BToBFwAPhottntRZsmxq5rkQrtw1zvC7wR8ZxLQ4B5wukRc72hSYI2O0XbhcJ+KSeCGbwsr+eafGJzyxbBIfpKyzZR2L4XnYSBrcJp7dKmE6G4rvNEW9F2gbgnJ0JXx+BzAkxzXK8VAehu3hbvXAcuCvumYgU4JRzO9jyJQ462zTwDrfEIk5sC5z0i2CdPmFe+XeCNLW4aUFfU2Aw21/U8tFntae961V2DbyUKqguEme85tU6nUqVunutkY1OruONpTEvwkyTCZZkcrbdH9mFz3bUhMyfXNp+LEaCHcPbGslWkKEBtJi9ABL3aDPK0kQJ8KkaAUcLZFctWb1NAtO9lsrnN3oSYU50CS4SzA5ZtrbAddrRvXmgSdPg4Hkp84v75qSVB/vwQ8rO0NZsfuQy2C9QBwWVQtB+dT+ITbbR/m43FCHBaOJshEuRjYd8VqAOChZDVtqn56GpzLekkymyPbb7ntRmj7sPGVPPX2EpA8hywt2i3xpGc5lh27eNEoBQ+YZfClm26w/fAhDH0A97+1XdKYL/VqMJ87tounD31zPGHDtV3A53y6twfk34YwcRnYljq2LHqzVDffDurJky5p+2ghO3whiIEyG16qs2GqaXnzNK3HV5RSGdnA4Ov9K3Vpr3+JvjlPzoQKS/UUQfz4wYX+otw/zx8DAXu/2MB5JHY+9Aq4cXU3xuAu+Zp6gy/R/8cpgAfej4uM2J+LHonFu5vAvDcPKQthcQaiUQikUgkEolEIhFVYvwAojplHjdcw8QAAAAASUVORK5CYII=">
+            </div>
+
+            <br>
+            <br>
+            
+            <div class="subjectOptionBox" onclick="generateCalculusOneQuestion()">
+                <p>Calculus 1</p>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAADB0lEQVR4nO3bP6gcVRTH8RNiLMR/pWg0KIpBBAX/JBY2EgJBlCBKwH9Yiv9KCSlsVIxiFYKViAYFUTGCWChBmyDBwkJFbUz0RbFQiFFE4lM/Mux7MJy3u29282An9+4Xttp7Zs7vN3Nn7j33TsScOXPmzACchQfwAX7Gv/gBB3EH1kWp4Hp8bTyHcGmUBm7Fn7pxDJuiFHAJfjUZh6MU8PYQga/jOpyDm/Bh+v+3KAFsxn9J3DND2q3Hy602L0QJ4Okk/vPmTTCmfXM33BClgMPJgIejFrAOfyQDLo9awGVJ/ImoCWxPBnwaNYEnkgGvRE3gpWTAk1ET+DgZcGfUhMFsr81VUQu4MIk/NW4AVBzYmgz4KmoCDyUD3omawN7VJkCttjtwfOm3c4pz7WzF74g+gPeSAfePadskvswidk1wnl1LMcscjz6Ab5MBN3Y0oLMJQ8Q3LMSswdn4u5VUUw84b5VbeHESE0aIX5ymC605uGbSq4K7hwj6Z1jXwT0j2t4XfQB3peQ+6hi3qgm9F9+APSnBfdGRcSacEeIbcCAl+UhMwJj+PdFzYmbgs5TobVMcY9id0O8r3yqDnUzJXhxTMMaEfopvwMaU7Mlp1/tG9PllA0YOrGYKtqVkj6yx+H6bgEdToq9NcYwz9yGI/SnJ3RPGj3zVTTJYmhkGy9ttOg9Nu7zne28CfkzJbe4Y13mQ01sTcH5aCG0mRBs6xJUxGTJY2GzzTce4tZwOz64eYLD3p83BjnFrWRCZXT0AzyYDnusYt1wSWzjNktjCTEtieDcZ8GDUhJU7wG6Oyvb/nUoGXBC1gKuT+J+iJgweRG0ORU1gdzJgf9QEXk0GPBY1gSPJgG1REziRDNgYtYArkvjfi972nsHjyYBPohQMZnhbx/y/AV8mA56KEsCLLVHNRub1Q9o8n8Q3X4BcGSVgZX2/2dK+Becuff3xppW8EQVvdF6NX3BRlAI24ahuNJuib4nSMFjpyV9zZL7AtVEyuB1v4Xv8he/wPu4d9nCcM2fOnOgx/wMh9vvLFqOtoAAAAABJRU5ErkJggg==">
+            </div>
+        </div>
+    </span>
+
+    <div class="sectionSpace"></div>
+    <div class="sectionSpace"></div>
+    <div class="sectionSpace"></div>
+
+    <div class="footer">
+        <div class="footerContentsContainer">
+            <div>
+                <p class="normalTextStyle footerText">Social Media</p>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADYklEQVR4nO2Zy04UQRSGe4GK4TouYauCcSGK7lTiTmIi+gSEiLyAF3QNsiUYlhJ8AS+JKxm87tS9gG4U3CoKiCv5TMlfsTKZ6a7u6Z4ek/mTSTrTVaf+03Xq3CoIGmggfwA9wDiwCCwBW6QHI8vILAI3gcNZKHASeEbtsQj0p6HAHmAW2JHgr8A94KJ2pyWVL7W7VotkDgFzWgutfRdoSiq4ADyXsJ/ABNCeFnGP9duBSWDb2Z3OJDthTemLMa3MGEdzOQZ8EpdXwN44k405GawCXZky9ePTBayJ00ycg70jczoe1AmAEzKz3+bZZ4I1qYmgzgDcEbdi1MAexzvV7GA761/QmTRmNFjmfQfwTRwPhQkywc5gLmvSFdZfc2LIaoUx83p/I0yQiaoGQ1kSrlKRy3q/ECZoRYMSpweKPyPAY2BZqceWnh/pXaHC3EEpY7zl+QjzXw4jsaFBbQkU2A/cBr57pB7rwC2gOcE6bZKxETboLxL6+XcO0afAqE1j9OvVfwvOuLdJ4hRRPJMoIiVW7XYDpz3mnHHMOHbQJW1FZE52J17EyYV0ll5q7ps4ZkYGipgzgeqIeAndP2XszoznoohI2IMdaU4hcgYcB1DIQ5ERe7Bj8I6KX8N5KGJigsGVGJwryboqWQ/yUMTadk8MzpVk9VqvF+SgyKaGt8bgXElWq2Rt/u+KmLLW4Ifn+IZphR320aBKAGN5HvaRyHTaE+qQ5OZ+CwpiBmdj8C6Vc04yjKzOmitSkqKs+EblMh/jQ2TFVwNFmpWKowTQWxngAPC6LpLGMmm8+boDgZ85faybNL5EGfNVLYryREcU7Fr1POYcbLsTmRRWG1WUus3qwlgHEIZ1XR3sy6rUXUmh+dBp3CjwUHXKpn5L+m84Se0St/mQazvIB047qHL5oO3OrUHnA+C+OF6r25ZpFLxbphpsvcpkUGcApiLNyhncr2uFba/2fY3A7nXHL10r9PlOMnd2qH3ZnTnLaD7dTl94Os7EJsfETJv/VKZMw7n0AZ+dQNuUJB5YZbZ1ydKRGePyB3tK5oRarcnij3ZmRnaJPIa5n7ikhkHVZa6zlkljehUn5h3vZNaeTnw9XbLIUeAJtUcxE4djfLepG7TNNv1IC0bWe3XyrwMHU1eggQaC2PgDcoKh50PBZGwAAAAASUVORK5CYII=">
+            </div>
+
+            <div>
+                <p class="normalTextStyle footerText">Get Started</p>
+                <a href="./subjects.html"><button class="getStartedButtonBlue normalTextStyle">Start Learning</button></a>
+            </div>
+        </div>
+        <br>
+        <br>
+        <p class="footerText">Developed by : Mantis Software LLC</p>
+    </div>
+
+</body>
+</html>

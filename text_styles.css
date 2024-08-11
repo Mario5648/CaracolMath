@@ -1,0 +1,25 @@
+.questionTextStyle
+{
+    color:white;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.timerTextStyle
+{
+    color:white;
+    font-size: 18px;
+}
+
+.explanationTitle
+{
+    color:white;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.explanationTextStyle
+{
+    color:white;
+    font-size: 18px;
+}

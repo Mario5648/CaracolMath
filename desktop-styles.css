@@ -1,0 +1,403 @@
+a
+{
+    color: white;
+    text-decoration: none;
+}
+
+@media (min-width: 1000px) {
+    .mainBody
+    {
+        background-color: #000000;
+        
+        margin: 0;
+        padding: 0;
+
+        padding-top: 30px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        font-family: "Nunito", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    .navbarContainer
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 1000px;
+    }
+
+    .desktopMenu
+    {
+        display: block;
+    }
+
+    .mobileMenu
+    {
+        display: none;
+    }
+
+    .logoImage
+    {
+        width: 100px;
+    }
+
+    .menuOptions
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 25rem;
+
+        font-size: 16px;
+
+        color: white;
+    }
+
+    .getStartedButtonBlue
+    {
+        width: 150px;
+        height: 30px;
+
+        font-size: 16px;
+        background-color: #2369ed;
+        color: white;
+
+        border-style: none;
+        border-radius: 16px;
+    }
+
+    .getStartedButtonBlue:hover
+    {
+        background-color: white;
+        color: #2369ed;
+        cursor: pointer;
+
+    }
+
+    .optionText:hover
+    {
+        color: #2369ed;
+        cursor: pointer;
+    }
+
+    .normalTextStyle
+    {
+        font-family: "Nunito", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    .titleTextStyle
+    {
+        font-family: "Nunito", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .heroContainer
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 1000px;
+    }
+
+    .heroRight
+    {
+        padding: 30px;
+    }
+    .heroLeft
+    {
+        padding: 30px;
+    }
+
+    .heroMainText
+    {
+        font-size: 40px;
+        color: white;
+    }
+
+    .specialText
+    {
+        font-size: 40px;
+        color: white;
+        text-decoration: underline;
+    }
+
+    .heroImg
+    {
+        width: 500px;
+    }
+
+    .sectionSpace
+    {
+        height:150px
+    }
+
+    .getStartedButtonClear
+    {
+        width: 150px;
+        height: 30px;
+
+        font-size: 16px;
+
+        background-color: #000000;
+        color: white;
+
+        border-color: white;
+        border-radius: 16px;
+    }
+
+    .getStartedButtonClear:hover
+    {
+        color: #000000;
+        background-color: white;
+
+        cursor: pointer;
+    }
+
+    .halfTextImageContainer
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 1000px;
+    }
+
+    .halfTextContianer
+    {
+        padding: 30px;
+    }
+    .halfImageContainer
+    {
+        padding: 30px;
+    }
+
+    .containerTitleText
+    {
+        color: white;
+        font-size: 30px;
+    }
+
+    .sectionNormalTextStyle
+    {
+        color: white;
+        font-size: 16px;
+    }
+    .footer
+    {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footerContentsContainer
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        width: 1000px;
+        
+    }
+
+    .footerText
+    {
+        color: white;
+    }
+
+    .pageTitleText
+    {
+        color: white;
+        font-size: 30px;
+    }
+    
+    .subjectOptionBox
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+
+        width: 500px;
+        border-style: solid;
+        border-color: white;
+        border-radius: 16px;
+
+        color: white;
+
+        padding: 20px;
+
+        font-size: 25px;
+    }
+
+    .subjectOptionBox:hover
+    {
+        color: black;
+        background-color: white;
+
+        cursor: pointer;
+    }
+
+    .faqContainer
+    {
+        max-width: 1000px;
+        width: 100%;
+    }
+
+    .faqContainerBox
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+
+        
+        border-style: solid;
+        border-color: white;
+        border-radius: 16px;
+
+        color: white;
+
+        padding: 20px;
+    }
+
+    .faqQuestionText
+    {
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+    .aboutUsText
+    {
+        color: white;
+    }
+
+    .questionContainer
+    {
+        width: 900px;
+        padding: 30px;
+    }
+
+    .answerChoiceBox
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+        width: 90%;
+        color:white;
+        background-color: #000000;
+        border-radius: 16px;
+        border-style: solid;
+        border-color: white;
+
+        padding: 30px;
+
+        font-size: 20px;
+    }
+
+    .answerChoiceBox:hover
+    {
+        color:#000;
+        background-color: white;
+        border-color: white;
+    }
+
+    .answerChoiceBoxDisabled
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+        max-width: 1000px;
+        width: 100%;
+
+        color:#EE4B2B;
+        background-color: #000000;
+        border-radius: 16px;
+        border-style: solid;
+        border-color: #EE4B2B;
+
+        padding: 30px;
+    }
+
+    .answerChoiceBoxCorrectDisabled
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+        max-width: 1000px;
+        width: 100%;
+
+        color:#50C878;
+        background-color: #000000;
+        border-radius: 16px;
+        border-style: solid;
+        border-color: #50C878;
+
+        padding: 30px;
+    }
+
+    .questionMenuContainer
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .generateQuestionButton
+    {
+        width: 200px;
+        height: 60px;
+        padding: 15px;
+
+        background-color: white;
+        color: #000;
+        border-style: none;
+        border-radius: 16px;
+        
+        font-size: 16px;
+    }
+    
+    .generateQuestionButton:hover
+    {
+        background-color: #000;
+        color: white;
+        border-style: solid;
+        border-color: white;
+
+    }
+
+    .timerTextContainer
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}
